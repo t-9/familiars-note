@@ -36,6 +36,23 @@ services:
       - MYSQL_USER=${DB_USER}
       - MYSQL_PASSWORD=${DB_PW}
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+  maildev:
+    container_name: familiars-note-maildev
+    build:
+      context: ./maildev
+    ports:
+      - ${MAILDEV_HTTP_PORT}:1080
+    networks:
+      - familiars-note-network
+    restart: always
+  adminer:
+    container_name: familiars-note-adminer
+    build:
+      context: ./adminer
+    ports:
+      - ${ADMINER_PORT}:8080
+    networks:
+      - familiars-note-network
   composer:
     container_name: familiars-note-composer
     build:
@@ -48,14 +65,6 @@ services:
       context: ./npm
     volumes:
       - ../../volumes/php/app:/root/app
-  adminer:
-    container_name: familiars-note-adminer
-    build:
-      context: ./adminer
-    ports:
-      - ${ADMINER_PORT}:8080
-    networks:
-      - familiars-note-network
 volumes:
   mariadb-data:
 networks:
