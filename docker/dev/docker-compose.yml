@@ -18,5 +18,11 @@ services:
       - ../../volumes/php/app:/var/www/html
     networks:
       - familiars-note-network
+  composer:
+    container_name: familiars-note-composer
+    build:
+      context: ./composer
+    volumes:
+      - ../../volumes/php/app:/var/www/html
 networks:
   familiars-note-network:
