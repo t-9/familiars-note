@@ -28,9 +28,14 @@ You can view it by going to the following URL.
 ## npm
 The npm can be run by the following commands such as.
 ```
-docker-compose run --rm npm install && npm run dev
+docker-compose run --rm npm install
+docker-compose run --rm npm run dev
 ```
 
 ## adminer
 You can view The adminer page by going to the following URL.  
 [http://localhost:9781/](http://localhost:9781/)
+
+## maildev
+You can view The maildev page by going to the following URL.  
+[http://localhost:9782/](http://localhost:9782/)
