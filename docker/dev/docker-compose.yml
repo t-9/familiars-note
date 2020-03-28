@@ -17,6 +17,7 @@ services:
       context: ./php
     volumes:
       - ../../volumes/php/app:/var/www/html
+      - ../../volumes/php/conf/php.ini:/usr/local/etc/php/php.ini
     networks:
       - familiars-note-network
     restart: always
