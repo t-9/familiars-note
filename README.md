@@ -19,7 +19,11 @@ You can view it by going to the following URL.
 [http://localhost:9780/](http://localhost:9780/)
 
 ## npm
-npm can be run by the following commands such as.
+The npm can be run by the following commands such as.
 ```
 docker exec -it familiars-note-npm sh -c "npm install && npm run dev"
 ```
+
+## adminer
+You can view The adminer page by going to the following URL.
+[http://localhost:9781/](http://localhost:9781/)

@@ -21,6 +21,21 @@ services:
     networks:
       - familiars-note-network
     restart: always
+  mariadb:
+    container_name: familiars-note-mariadb
+    build:
+      context: ./mariadb
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    networks:
+      - familiars-note-network
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PW}
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PW}
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
   composer:
     container_name: familiars-note-composer
     build:
@@ -33,5 +48,15 @@ services:
       context: ./npm
     volumes:
       - ../../volumes/php/app:/root/app
+  adminer:
+    container_name: familiars-note-adminer
+    build:
+      context: ./adminer
+    ports:
+      - ${ADMINER_PORT}:8080
+    networks:
+      - familiars-note-network
+volumes:
+  mariadb-data:
 networks:
   familiars-note-network:
