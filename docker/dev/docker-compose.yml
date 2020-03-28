@@ -38,6 +38,15 @@ services:
       - MYSQL_USER=${DB_USER}
       - MYSQL_PASSWORD=${DB_PW}
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+  redis:
+    container_name: familiars-note-redis
+    build:
+      context: ./redis
+    volumes:
+      - redis-data:/data
+    networks:
+      - familiars-note-network
+    restart: always
   maildev:
     container_name: familiars-note-maildev
     build:
@@ -55,6 +64,16 @@ services:
       - ${ADMINER_PORT}:8080
     networks:
       - familiars-note-network
+  redis-commander:
+    container_name: redis-commander
+    build:
+      context: ./redis-commander
+    ports:
+      - ${REDIS_COMMANDER_PORT}:8081
+    networks:
+      - familiars-note-network
+    environment:
+      REDIS_HOSTS: Index0:redis:6379:0, Index1:redis:6379:1
   composer:
     container_name: familiars-note-composer
     build:
@@ -69,5 +88,6 @@ services:
       - ../../volumes/php/app:/root/app
 volumes:
   mariadb-data:
+  redis-data:
 networks:
   familiars-note-network:
