@@ -1,8 +1,23 @@
 version: '3.7'
 services:
-  app:
-    ports:
-      - ${APP_PORT}:80
+  nginx:
+    container_name: familiars-note-nginx
     build:
-      context: ./app
-    restart: always
+      context: ./nginx
+    ports:
+      - ${HTTP_PORT}:80
+    volumes:
+      - ../../volumes/nginx/conf/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - familiars-note-network
+  php:
+    container_name: familiars-note-php
+    build:
+      context: ./php
+    volumes:
+      - ../../volumes/php/app:/app
+    command: "php -S 0.0.0.0:80 /app/index.php"
+    networks:
+      - familiars-note-network
+networks:
+  familiars-note-network:
