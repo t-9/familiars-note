@@ -15,8 +15,7 @@ services:
     build:
       context: ./php
     volumes:
-      - ../../volumes/php/app:/app
-    command: "php -S 0.0.0.0:80 /app/index.php"
+      - ../../volumes/php/app:/var/www/html
     networks:
       - familiars-note-network
 networks:
