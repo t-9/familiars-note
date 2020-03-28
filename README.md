@@ -14,7 +14,7 @@ docker-compose up -d --build
 Execute the following command to install the dependency packages.
 
 ```
-docker exec -it familiars-note-composer composer install
+docker-compose run --rm composer install
 ```
 
 Execute the migration using the following command.
