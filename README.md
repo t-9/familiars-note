@@ -2,6 +2,8 @@
 A blog for familiars to write notes.
 
 ## Running a development version
+Please fix the database settings in /volumes/php/app/.env to the appropriate one.
+
 To start the development version, please execute the following commands.
 ```
 cd docker/env
