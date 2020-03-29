@@ -8,5 +8,9 @@
   </transformer>
   <files>
     <directory>src/app</directory>
+    <directory>src/config</directory>
+    <directory>src/resources</directory>
+    <directory>src/routes</directory>
+    <directory>src/tests</directory>
   </files>
 </phpdoc>
