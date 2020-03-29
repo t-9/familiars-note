@@ -15,4 +15,4 @@ RUN apk add --no-cache --virtual .phive-deps \
     apk del .phive-deps
 
 ENTRYPOINT ["tools/phpDocumentor"]
-CMD ["-h"]
+CMD ["run"]
