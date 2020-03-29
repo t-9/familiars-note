@@ -59,8 +59,14 @@ docker-compose run --rm phpdoc
 You can view The document server page by going to the following URL.  
 [http://localhost:9784/](http://localhost:9784/)
 
-## Check code
-The phpDocumentor can be run by the following command.
+## Check the code
+The PHP CodeSniffer can be run by the following command.
 ```
 docker-compose run --rm phpcs
+```
+
+# Automatically convert the code
+The PHP Code Beautifier and Fixer can be run by the following command.
+```
+docker-compose run --rm phpcbf
 ```

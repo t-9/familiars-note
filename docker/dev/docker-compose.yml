@@ -110,6 +110,13 @@ services:
     volumes:
       - ../../volumes/phpcs/conf/phpcs.xml:/var/www/html/phpcs.xml
       - ../../volumes/php/app:/var/www/html/src
+  phpcbf:
+    container_name: familiars-note-phpcbf
+    build:
+      context: ./phpcbf
+    volumes:
+      - ../../volumes/phpcs/conf/phpcs.xml:/var/www/html/phpcs.xml
+      - ../../volumes/php/app:/var/www/html/src
   artisan:
     container_name: familiars-note-artisan
     build:
