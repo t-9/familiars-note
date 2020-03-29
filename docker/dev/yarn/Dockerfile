@@ -4,5 +4,5 @@ LABEL maintainer="Chikage <t-9@atx.tokyo>"
 
 WORKDIR /root/app
 
-ENTRYPOINT ["npm"]
-CMD ["-h"]
+ENTRYPOINT ["yarn"]
+CMD [""]

@@ -30,11 +30,11 @@ docker-compose run --rm artisan migrate
 You can view it by going to the following URL.  
 [http://localhost:9780/](http://localhost:9780/)
 
-## npm
-The npm can be run by the following commands such as.
+## yarn
+The yarn can be run by the following commands such as.
 ```
-docker-compose run --rm npm install
-docker-compose run --rm npm run dev
+docker-compose run --rm yarn install
+docker-compose run --rm yarn run dev
 ```
 
 ## adminer

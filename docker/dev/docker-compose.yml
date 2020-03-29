@@ -89,10 +89,10 @@ services:
       context: ./composer
     volumes:
       - ../../volumes/php/app:/var/www/html
-  npm:
-    container_name: familiars-note-npm
+  yarn:
+    container_name: familiars-note-yarn
     build:
-      context: ./npm
+      context: ./yarn
     volumes:
       - ../../volumes/php/app:/root/app
   phpdoc:
