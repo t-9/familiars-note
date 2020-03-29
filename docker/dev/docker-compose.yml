@@ -103,6 +103,13 @@ services:
       - ../../volumes/phpdoc/public:/var/www/html/public
       - ../../volumes/phpdoc/conf/phpdoc.xml:/var/www/html/phpdoc.xml
       - ../../volumes/php/app:/var/www/html/src
+  phpcs:
+    container_name: familiars-note-phpcs
+    build:
+      context: ./phpcs
+    volumes:
+      - ../../volumes/phpcs/conf/phpcs.xml:/var/www/html/phpcs.xml
+      - ../../volumes/php/app:/var/www/html/src
   artisan:
     container_name: familiars-note-artisan
     build:

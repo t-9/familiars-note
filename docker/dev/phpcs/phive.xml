@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phive xmlns="https://phar.io/phive">
+  <phar name="phpcs" version="^3.5.4" installed="3.5.4" location="./tools/phpcs" copy="false"/>
+</phive>
