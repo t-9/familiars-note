@@ -65,7 +65,7 @@ The PHP CodeSniffer can be run by the following command.
 docker-compose run --rm phpcs
 ```
 
-# Automatically convert the code
+## Automatically convert the code
 The PHP Code Beautifier and Fixer can be run by the following command.
 ```
 docker-compose run --rm phpcbf
