@@ -54,3 +54,7 @@ The phpDocumentor can be run by the following command.
 ```
 docker-compose run --rm phpdoc run
 ```
+
+## Document Server
+You can view The document server page by going to the following URL.  
+[http://localhost:9784/](http://localhost:9784/)

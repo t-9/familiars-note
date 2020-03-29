@@ -74,6 +74,15 @@ services:
       - familiars-note-network
     environment:
       REDIS_HOSTS: Index0:redis:6379:0, Index1:redis:6379:1
+  nginx-phpdoc:
+    container_name: familiars-note-nginx-phpdoc
+    build:
+      context: ./nginx-phpdoc
+    ports:
+      - ${PHPDOC_HTTP_PORT}:80
+    volumes:
+      - ../../volumes/nginx-phpdoc/conf/default.conf:/etc/nginx/conf.d/default.conf
+      - ../../volumes/phpdoc/public:/var/www/html
   composer:
     container_name: familiars-note-composer
     build:
