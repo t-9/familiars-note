@@ -24,7 +24,7 @@ docker-compose run --rm composer install
 
 Execute the migration using the following command.
 ```
-docker exec -it familiars-note-php sh -c "php artisan migrate"
+docker-compose run --rm artisan migrate
 ```
 
 You can view it by going to the following URL.  
@@ -48,3 +48,25 @@ You can view The maildev page by going to the following URL.
 ## redis Commander
 You can view The redis Commander page by going to the following URL.  
 [http://localhost:9783/](http://localhost:9783/)
+
+## Generate the PHP document
+The phpDocumentor can be run by the following command.
+```
+docker-compose run --rm phpdoc
+```
+
+## Document Server
+You can view The document server page by going to the following URL.  
+[http://localhost:9784/](http://localhost:9784/)
+
+## Check the code
+The PHP CodeSniffer can be run by the following command.
+```
+docker-compose run --rm phpcs
+```
+
+# Automatically convert the code
+The PHP Code Beautifier and Fixer can be run by the following command.
+```
+docker-compose run --rm phpcbf
+```

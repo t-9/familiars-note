@@ -74,6 +74,15 @@ services:
       - familiars-note-network
     environment:
       REDIS_HOSTS: Index0:redis:6379:0, Index1:redis:6379:1
+  nginx-phpdoc:
+    container_name: familiars-note-nginx-phpdoc
+    build:
+      context: ./nginx-phpdoc
+    ports:
+      - ${PHPDOC_HTTP_PORT}:80
+    volumes:
+      - ../../volumes/nginx-phpdoc/conf/default.conf:/etc/nginx/conf.d/default.conf
+      - ../../volumes/phpdoc/public:/var/www/html
   composer:
     container_name: familiars-note-composer
     build:
@@ -86,6 +95,37 @@ services:
       context: ./npm
     volumes:
       - ../../volumes/php/app:/root/app
+  phpdoc:
+    container_name: familiars-note-phpdoc
+    build:
+      context: ./phpdoc
+    volumes:
+      - ../../volumes/phpdoc/public:/var/www/html/public
+      - ../../volumes/phpdoc/conf/phpdoc.xml:/var/www/html/phpdoc.xml
+      - ../../volumes/php/app:/var/www/html/src
+  phpcs:
+    container_name: familiars-note-phpcs
+    build:
+      context: ./phpcs
+    volumes:
+      - ../../volumes/phpcs/conf/phpcs.xml:/var/www/html/phpcs.xml
+      - ../../volumes/php/app:/var/www/html/src
+  phpcbf:
+    container_name: familiars-note-phpcbf
+    build:
+      context: ./phpcbf
+    volumes:
+      - ../../volumes/phpcs/conf/phpcs.xml:/var/www/html/phpcs.xml
+      - ../../volumes/php/app:/var/www/html/src
+  artisan:
+    container_name: familiars-note-artisan
+    build:
+      context: ./artisan
+    networks:
+      - familiars-note-network
+    volumes:
+      - ../../volumes/php/app:/var/www/html
+      - ../../volumes/php/conf/php.ini:/usr/local/etc/php/php.ini
 volumes:
   mariadb-data:
   redis-data:

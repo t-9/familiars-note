@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+  <parser>
+    <target>public</target>
+  </parser>
+  <transformer>
+    <target>public</target>
+  </transformer>
+  <files>
+    <directory>src/app</directory>
+    <directory>src/config</directory>
+    <directory>src/resources</directory>
+    <directory>src/routes</directory>
+    <directory>src/tests</directory>
+  </files>
+</phpdoc>
