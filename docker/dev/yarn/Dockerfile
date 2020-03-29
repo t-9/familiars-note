@@ -4,5 +4,7 @@ LABEL maintainer="Chikage <t-9@atx.tokyo>"
 
 WORKDIR /root/app
 
+RUN apk add --no-cache python make g++
+
 ENTRYPOINT ["yarn"]
 CMD [""]
