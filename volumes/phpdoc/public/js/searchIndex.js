@@ -351,6 +351,41 @@ Search.appendIndex(
             "summary": "The\u0020attributes\u0020that\u0020should\u0020be\u0020cast\u0020to\u0020native\u0020types.",
             "url": "../classes/App-User.html#property_casts"
         },                {
+            "fqsen": "\\Tests\\CreatesApplication",
+            "name": "CreatesApplication",
+            "summary": "",
+            "url": "../classes/Tests-CreatesApplication.html"
+        },                {
+            "fqsen": "\\Tests\\CreatesApplication\u003A\u003AcreateApplication\u0028\u0029",
+            "name": "createApplication",
+            "summary": "Creates\u0020the\u0020application.",
+            "url": "../classes/Tests-CreatesApplication.html#method_createApplication"
+        },                {
+            "fqsen": "\\Tests\\Feature\\ExampleTest",
+            "name": "ExampleTest",
+            "summary": "",
+            "url": "../classes/Tests-Feature-ExampleTest.html"
+        },                {
+            "fqsen": "\\Tests\\Feature\\ExampleTest\u003A\u003AtestBasicTest\u0028\u0029",
+            "name": "testBasicTest",
+            "summary": "A\u0020basic\u0020test\u0020example.",
+            "url": "../classes/Tests-Feature-ExampleTest.html#method_testBasicTest"
+        },                {
+            "fqsen": "\\Tests\\TestCase",
+            "name": "TestCase",
+            "summary": "",
+            "url": "../classes/Tests-TestCase.html"
+        },                {
+            "fqsen": "\\Tests\\Unit\\ExampleTest",
+            "name": "ExampleTest",
+            "summary": "",
+            "url": "../classes/Tests-Unit-ExampleTest.html"
+        },                {
+            "fqsen": "\\Tests\\Unit\\ExampleTest\u003A\u003AtestBasicTest\u0028\u0029",
+            "name": "testBasicTest",
+            "summary": "A\u0020basic\u0020test\u0020example.",
+            "url": "../classes/Tests-Unit-ExampleTest.html#method_testBasicTest"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -395,5 +430,20 @@ Search.appendIndex(
             "name": "App",
             "summary": "",
             "url": "../namespaces/app.html"
+        },                {
+            "fqsen": "\\Tests",
+            "name": "Tests",
+            "summary": "",
+            "url": "../namespaces/tests.html"
+        },                {
+            "fqsen": "\\Tests\\Feature",
+            "name": "Feature",
+            "summary": "",
+            "url": "../namespaces/tests-feature.html"
+        },                {
+            "fqsen": "\\Tests\\Unit",
+            "name": "Unit",
+            "summary": "",
+            "url": "../namespaces/tests-unit.html"
         }            ]
 );
