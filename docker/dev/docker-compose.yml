@@ -103,6 +103,15 @@ services:
       - ../../volumes/phpdoc/public:/var/www/html/public
       - ../../volumes/phpdoc/conf/phpdoc.xml:/var/www/html/phpdoc.xml
       - ../../volumes/php/app:/var/www/html/src
+  artisan:
+    container_name: familiars-note-artisan
+    build:
+      context: ./artisan
+    networks:
+      - familiars-note-network
+    volumes:
+      - ../../volumes/php/app:/var/www/html
+      - ../../volumes/php/conf/php.ini:/usr/local/etc/php/php.ini
 volumes:
   mariadb-data:
   redis-data:

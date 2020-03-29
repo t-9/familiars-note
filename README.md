@@ -24,7 +24,7 @@ docker-compose run --rm composer install
 
 Execute the migration using the following command.
 ```
-docker exec -it familiars-note-php sh -c "php artisan migrate"
+docker-compose run --rm artisan migrate
 ```
 
 You can view it by going to the following URL.  
