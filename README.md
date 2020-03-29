@@ -40,6 +40,6 @@ You can view The adminer page by going to the following URL.
 You can view The maildev page by going to the following URL.  
 [http://localhost:9782/](http://localhost:9782/)
 
-## maildev
+## redis Commander
 You can view The redis Commander page by going to the following URL.  
 [http://localhost:9783/](http://localhost:9783/)
