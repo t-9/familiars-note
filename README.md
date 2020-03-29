@@ -52,9 +52,15 @@ You can view The redis Commander page by going to the following URL.
 ## Generate the PHP document
 The phpDocumentor can be run by the following command.
 ```
-docker-compose run --rm phpdoc run
+docker-compose run --rm phpdoc
 ```
 
 ## Document Server
 You can view The document server page by going to the following URL.  
 [http://localhost:9784/](http://localhost:9784/)
+
+## Check code
+The phpDocumentor can be run by the following command.
+```
+docker-compose run --rm phpcs
+```
