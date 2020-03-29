@@ -48,3 +48,9 @@ You can view The maildev page by going to the following URL.
 ## redis Commander
 You can view The redis Commander page by going to the following URL.  
 [http://localhost:9783/](http://localhost:9783/)
+
+## Generate the PHP document
+The phpDocumentor can be run by the following command.
+```
+docker-compose run --rm phpdoc run
+```

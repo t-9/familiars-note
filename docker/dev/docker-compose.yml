@@ -86,6 +86,14 @@ services:
       context: ./npm
     volumes:
       - ../../volumes/php/app:/root/app
+  phpdoc:
+    container_name: familiars-note-phpdoc
+    build:
+      context: ./phpdoc
+    volumes:
+      - ../../volumes/phpdoc/public:/var/www/html/public
+      - ../../volumes/phpdoc/conf/phpdoc.xml:/var/www/html/phpdoc.xml
+      - ../../volumes/php/app:/var/www/html/src
 volumes:
   mariadb-data:
   redis-data:
