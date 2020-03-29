@@ -1,8 +1,10 @@
 # familiars-note
-A blog for familiars to write notes.  
 [![license](https://img.shields.io/github/license/t-9/familiars-note.svg)](https://github.com/t-9/familiars-note#license)
 [![release](https://img.shields.io/github/release/t-9/familiars-note.svg)](https://github.com/t-9/familiars-note/releases)
 [![repo size](https://img.shields.io/github/repo-size/t-9/familiars-note.svg)](https://github.com/t-9/familiars-note#repo_size)  
+
+## Overview
+A blog for familiars to write notes.  
 
 ## Running a development version
 Please fix the settings in /volumes/php/app/.env to the appropriate one.
