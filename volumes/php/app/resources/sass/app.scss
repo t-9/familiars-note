@@ -1,8 +1,15 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.v-application {
+    font-family: $body-font-family, sans-serif !important;
+    .title {
+        font-family: $title-font, sans-serif !important;
+    }
+}
