@@ -23,6 +23,7 @@
     <div id="app">
         <v-app id="inspire">
             <v-app-bar
+                app
                 color="primary"
             >
                 <v-app-bar-nav-icon></v-app-bar-nav-icon>
@@ -46,9 +47,9 @@
 
             </v-app-bar>
 
-            <main class="py-4">
+            <v-content>
                 @yield('content')
-            </main>
+            </v-content>
 
             <v-footer
                 app
