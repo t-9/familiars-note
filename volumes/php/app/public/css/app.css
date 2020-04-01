@@ -10890,3 +10890,19 @@ a.text-dark:focus {
   font-family: "Dancing Script", "Noto Serif JP", sans-serif, sans-serif !important;
 }
 
+.v-application .headline {
+  font-family: "Dancing Script", "Noto Serif JP", sans-serif, sans-serif !important;
+}
+
+.v-application .v-application--wrap {
+  font-family: "Dancing Script", "Noto Serif JP", sans-serif, sans-serif !important;
+}
+
+.v-application .v-application--wrap .title {
+  font-family: "Dancing Script", "Noto Serif JP", sans-serif, sans-serif !important;
+}
+
+.v-application .v-application--wrap .headline {
+  font-family: "Dancing Script", "Noto Serif JP", sans-serif, sans-serif !important;
+}
+

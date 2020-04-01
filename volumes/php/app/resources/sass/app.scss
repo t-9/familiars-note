@@ -13,4 +13,16 @@
     .title {
         font-family: $title-font, sans-serif !important;
     }
+    .headline {
+        font-family: $heading-font-family, sans-serif !important;
+    }
+    .v-application--wrap {
+        font-family: $body-font-family, sans-serif !important;
+        .title {
+            font-family: $title-font, sans-serif !important;
+        }
+        .headline {
+            font-family: $heading-font-family, sans-serif !important;
+        }
+    }
 }

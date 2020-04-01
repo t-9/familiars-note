@@ -22,40 +22,38 @@
 <body>
     <div id="app">
         <v-app id="inspire">
-            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-                <div class="container">
-                    <v-app-bar
-                        absolute
-                        color="primary"
-                    >
-                        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+            <v-app-bar
+                color="primary"
+            >
+                <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-                        <v-toolbar-title>{{ config('app.name', 'Laravel') }}</v-toolbar-title>
-                
-                        <v-spacer></v-spacer>
+                <v-toolbar-title>{{ config('app.name', 'Laravel') }}</v-toolbar-title>
+        
+                <v-spacer></v-spacer>
 
-                        @guest
-                            <v-btn text small color="secondary" href="{{ route('login') }}">{{ __('Login') }}</v-btn>
-                        @else
-                            <v-btn text small color="secondary" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">{{ __('Logout') }}
-                            </v-btn>
+                @guest
+                    <v-btn text small color="secondary" href="{{ route('login') }}">{{ __('Login') }}</v-btn>
+                @else
+                    <v-btn text small color="secondary" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">{{ __('Logout') }}
+                    </v-btn>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        @endguest
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                @endguest
 
-                    </v-app-bar>
-                </div>
-            </nav>
+            </v-app-bar>
 
             <main class="py-4">
                 @yield('content')
             </main>
 
-            <v-footer app>
+            <v-footer
+                app
+                color="primary"
+            >
                 <span>&copy; {{ now()->year }} {{ config('app.name', 'Familiars Note') }}</span>
             </v-footer>
 
